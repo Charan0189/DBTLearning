@@ -1,0 +1,1 @@
+select * from {{ref('usecase_integration')}}

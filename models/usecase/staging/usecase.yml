@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: usecase1
+    database: raw
+    schema: jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
+  - name: usecase2
+    database: raw
+    schema: stripe
+    tables:
+      - name: payment
