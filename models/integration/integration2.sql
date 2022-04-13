@@ -62,17 +62,17 @@ final as (
 
     left join order_payments using (order_id)
 
+    
+   
+
     where 
-    payment_method = '{{ var("payment_method") }}'   
+    payment_method = '{{ var("payment_method") }}'
     and status = '{{ var("status") }}'
 
     and amount > {{ var("amount") }} 
     and created_at >= '{{ var("created") }}'
 
-    order by 2
-
-    
-
+ order by 2
 )
 
 

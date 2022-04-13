@@ -7,8 +7,8 @@ version: '1.0.0'
 config-version: 2
 
 vars:
-  payment_method: 'bank_transfer'
-  status: 'completed'
+  payment_method: 'Bank_Transfer'
+  status: 'Completed'
   amount: 1200
   created: '2018-01-05'
 
