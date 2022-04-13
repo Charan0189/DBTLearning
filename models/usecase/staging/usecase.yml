@@ -17,6 +17,6 @@ sources:
             tests:
               - accepted_values:
                   values:
-                    - bank_transfer
+                    - Bank_Transfer
 
             
