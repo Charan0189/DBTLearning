@@ -12,3 +12,11 @@ sources:
     schema: stripe
     tables:
       - name: payment
+        columns:
+          - name: paymentmethod
+            tests:
+              - accepted_values:
+                  values:
+                    - bank_transfer
+
+            
