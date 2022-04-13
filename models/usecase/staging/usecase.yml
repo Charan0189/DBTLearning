@@ -14,9 +14,6 @@ sources:
       - name: payment
         columns:
           - name: paymentmethod
-            tests:
-              - accepted_values:
-                  values:
-                    - Bank_Transfer
+
 
             
