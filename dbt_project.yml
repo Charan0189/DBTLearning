@@ -6,6 +6,12 @@ name: 'jaffle_shop'
 version: '1.0.0'
 config-version: 2
 
+vars:
+  payment_method: 'bank_transfer'
+  status: 'completed'
+  amount: 1200
+  created: '2018-01-05'
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
@@ -38,3 +44,5 @@ models:
         materialized: table
       staging:
         materialized: view
+
+
