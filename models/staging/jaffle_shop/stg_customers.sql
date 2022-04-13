@@ -1,7 +1,7 @@
  
     select
         id as customer_id,
-        trim(initcap(first_name)),
+        trim(initcap(first_name)) as first_name,
         last_name
 
     from {{ source('jaffle_shop', 'customers') }}
