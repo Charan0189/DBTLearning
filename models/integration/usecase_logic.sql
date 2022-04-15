@@ -8,7 +8,7 @@ with customers as  (
 
 payment_orders as (
 
-    select * from {{ ref('integration2') }}
+    select * from {{ ref('usecase_join') }}
 
 ),
 
