@@ -1,1 +1,1 @@
-select * from {{ref('integration1')}}
+select * from {{ref('usecase_logic')}}
