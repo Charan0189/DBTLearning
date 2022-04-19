@@ -22,7 +22,7 @@ pivoted as (
     sum(case when payment_method = 'gift_card' then amount else 0 end) as gift_card_amount
     #}
     from payments
-    where status = 'success'
+    where payment_status = 'Success'
     group by 1
 )
 select * from pivoted

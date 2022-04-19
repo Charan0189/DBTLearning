@@ -9,6 +9,8 @@ config-version: 2
 vars:
   payment_method: 'Bank_Transfer'
   status: 'Completed'
+  status1: 'Success'
+  status2: 'Returned'
   amount: 1200
   created: '2018-01-05'
 

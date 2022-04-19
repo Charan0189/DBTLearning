@@ -22,16 +22,14 @@ order_payments as (
 
         payment_method,
 
-        sum(amount) as amount,
+        payment_status,
 
-        created_at
-
+        sum(amount) as amount
 
 
     from payments
 
-    group by 1,2,4
-
+    group by 1,2,3
     
 
 ),
@@ -44,9 +42,11 @@ final as (
 
     select
 
+        orders.customer_id,
+          
         orders.order_id,
 
-        orders.customer_id,
+        order_payments.payment_status,
 
         orders.order_status,
 
@@ -54,25 +54,21 @@ final as (
 
         order_payments.amount,
 
-        order_payments.created_at
-
-
+        orders.order_date
 
     from orders
 
     left join order_payments using (order_id)
-
-    
-   
+  
 
     where 
-    payment_method = '{{ var("payment_method") }}'
-    and order_status = '{{ var("status") }}'
 
-    and amount > {{ var("amount") }} 
-    and created_at >= '{{ var("created") }}'
+    order_status = '{{ var("status2") }}'
 
- order by 2
+
+    order by 1
+
+ 
 )
 
 
